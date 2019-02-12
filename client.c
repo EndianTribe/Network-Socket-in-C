@@ -32,7 +32,7 @@ int main() {
     }
 
     if (record == NULL) {                                                                                                   // record will iterate to NULL if the above loop encounters no success
-        fprintf(stderr, "Failed to create or connect client socket.\n");
+        perror("Failed to create or connect client socket.");
         exit(EXIT_FAILURE);
     }
 
@@ -41,7 +41,7 @@ int main() {
     char *message = "Like, subscribe, comment, send money.\n #SubliminalMessagingDefinitelyWorks\n";                        // Set data to send
 
     if (send(clientSocket, message, strlen(message), 0) == -1) {                                                            // Send data
-        perror("Failed to send message.");
+        perror("Failed to perform cognitive recalibration.");                                                               // Error message for when send() fails
         exit(EXIT_FAILURE);
     } else {
         printf("Subliminal message has been planted.\n");
