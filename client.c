@@ -38,7 +38,7 @@ int main() {
 
     freeaddrinfo(results);                                                                                                  // results is a linked list and hence dynamically allocated. It must be freed manually
 
-    char *message = "Like, subscribe, comment, send money.\n #SubliminalMessageDefinitelyWorks\n";                          // Set data to send
+    char *message = "Like, subscribe, comment, send money.\n #SubliminalMessagingDefinitelyWorks\n";                        // Set data to send
 
     if (send(clientSocket, message, strlen(message), 0) == -1) {                                                            // Send data
         perror("Failed to send message.");
