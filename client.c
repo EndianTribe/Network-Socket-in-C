@@ -1,19 +1,10 @@
-// Required by getaddrinfo()
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netdb.h>
-
-// Required by memset()
-#include <string.h>
-
-// Required by perror()
-#include <stdio.h>
-
-// Required by exit()
-#include <stdlib.h>
-
-// Required by close()
-#include <unistd.h>
+#include <sys/types.h>                                                                                                      // Required by getaddrinfo()
+#include <sys/socket.h>                                                                                                     // Required by getaddrinfo()
+#include <netdb.h>                                                                                                          // Required by getaddrinfo()
+#include <string.h>                                                                                                         // Required by memset()
+#include <stdio.h>                                                                                                          // Required by perror()
+#include <stdlib.h>                                                                                                         // Required by exit()
+#include <unistd.h>                                                                                                         // Required by close()
 
 int main() {
 
