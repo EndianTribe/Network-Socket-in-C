@@ -47,5 +47,7 @@ int main() {
         printf("Subliminal message has been planted.\n");
     }
 
+    close(clientSocket);                                                                                                    // Don't forget to close the socket as client
+
     return 0;
 }
