@@ -8,8 +8,10 @@
 
 int main() {
 
+    printf("Client started.\n");
+
     const char *hostName = "127.0.0.1";                                                                                     // Set destination server IP address
-    const char *portNumber = "5000";                                                                                        // Set destination port number
+    const char *portNumber = "50000";                                                                                       // Set destination port number
     int clientSocket;                                                                                                       // File descriptor for client socket
     struct addrinfo hints;                                                                                                  // Hints provided to getaddrinfo() for translation
     memset(&hints, 0, sizeof(struct addrinfo));                                                                             // Initialize memory for hints
@@ -23,6 +25,8 @@ int main() {
         perror("Failed to translate client socket.");
         exit(EXIT_FAILURE);
     }
+
+    printf("Client socket translated.\n");
 
     for (record = results; record != NULL; record = record->ai_next) {                                                      // Iterate through every record in results
         clientSocket = socket(record->ai_family, record->ai_socktype, record->ai_protocol);                                 // Attempt to create socket from information provided in current record
@@ -38,7 +42,9 @@ int main() {
 
     freeaddrinfo(results);                                                                                                  // results is a linked list and hence dynamically allocated. It must be freed manually
 
-    char *message = "Like, subscribe, comment, send money.\n #SubliminalMessagingDefinitelyWorks\n";                        // Set data to send
+    printf("Client socket created and connected.\n");
+
+    char *message = "Like, subscribe, comment, send money.\n#SubliminalMessagingDefinitelyWorks";                        // Set data to send
 
     if (send(clientSocket, message, strlen(message), 0) == -1) {                                                            // Send data
         perror("Failed to perform cognitive recalibration.");                                                               // Error message for when send() fails
@@ -48,6 +54,8 @@ int main() {
     }
 
     close(clientSocket);                                                                                                    // Don't forget to close the socket as client
+
+    printf("Client socket closed.\n");
 
     return 0;
 }
