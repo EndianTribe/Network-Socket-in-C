@@ -11,7 +11,7 @@ int main() {
     printf("Client started.\n");
 
     const char *hostName = "127.0.0.1";                                                                                     // Set destination server IP address
-    const char *portNumber = "50000";                                                                                       // Set destination port number
+    const char *portNumber = "6969";                                                                                       // Set destination port number
     int clientSocket;                                                                                                       // File descriptor for client socket
     struct addrinfo hints;                                                                                                  // Hints provided to getaddrinfo() for translation
     memset(&hints, 0, sizeof(struct addrinfo));                                                                             // Initialize memory for hints

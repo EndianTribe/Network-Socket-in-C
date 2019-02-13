@@ -11,7 +11,7 @@ int main() {
     printf("Server started.\n");
 
     const size_t bufferSize = 1000;                                                                                         // Set global buffer size
-    const char *portNumber = "50000";                                                                                       // Set server port number
+    const char *portNumber = "6969";                                                                                       // Set server port number
     const int backlog = 1;                                                                                                  // Set max number of client requests that can remain in queue
     int serverSocket;                                                                                                       // File descriptor for server socket
     struct addrinfo hints;                                                                                                  // Hints provided to getaddrinfo() for translation
