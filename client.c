@@ -44,7 +44,7 @@ int main() {
 
     printf("Client socket created and connected.\n");
 
-    char *message = "Like, subscribe, comment, send money.\n#SubliminalMessagingDefinitelyWorks";                        // Set data to send
+    char *message = "Like, subscribe, comment, send money.\n#SubliminalMessagingDefinitelyWorks";                           // Set data to send
 
     if (send(clientSocket, message, strlen(message), 0) == -1) {                                                            // Send data
         perror("Failed to perform cognitive recalibration.");                                                               // Error message for when send() fails
