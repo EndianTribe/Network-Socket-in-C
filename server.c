@@ -22,7 +22,6 @@ int main() {
     hints.ai_socktype = SOCK_STREAM;                                                                                        // Set socket type to stream
     hints.ai_protocol = IPPROTO_TCP;                                                                                        // Set protocol type to TCP
 
-
     if ((getaddrinfo(NULL, portNumber, &hints, &results)) != 0) {                                                           // Translate address
         perror("Failed to translate server socket.");
         exit(EXIT_FAILURE);
